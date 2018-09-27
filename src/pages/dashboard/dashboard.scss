@@ -1,0 +1,6 @@
+page-dashboard {
+  .card-header-md {
+    background: map-get($colors, 'primary');
+    color: white;
+  }
+}

@@ -1,0 +1,79 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Realtime Event Info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            Food
+          </ion-card-header>
+          <ion-card-content>
+            <hr style="background: red;font-weight:600" [style.width]=" (contributed[0] / totals[0]) * 100 + '%'" />
+            <br>
+            Requested:
+            <span style="font-size: 3rem;">2507</span>
+            <br>
+            Contributed:
+            <span style="font-size: 3rem;">{{ contributed[0] }}</span>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            Clothes
+          </ion-card-header>
+          <ion-card-content>
+            <hr style="background: red;font-weight:600" [style.width]=" (contributed[1] / totals[1]) * 100 + '%'" />
+            <br>
+            Requested:
+            <span style="font-size: 3rem;">1621</span>
+            <br> Contributed:
+            <span style="font-size: 3rem;">{{ contributed[1] }}</span>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            Medicines
+          </ion-card-header>
+          <ion-card-content>
+            <hr style="background: red;font-weight:600" [style.width]=" (contributed[2] / totals[2]) * 100 + '%'" />
+            <br>
+            Requested:
+            <span style="font-size: 3rem;">3000</span>
+            <br> Contributed:
+            <span style="font-size: 3rem;">{{ contributed[2] }}</span>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            Shelter
+          </ion-card-header>
+          <ion-card-content>
+            <hr style="background: red;font-weight:600" [style.width]=" (contributed[3] / totals[3]) * 100 + '%'" />
+            <br>
+            Requested:
+            <span style="font-size: 3rem;">2500</span>
+            <br>
+            Contributed:
+            <span style="font-size: 3rem;">{{ contributed[3] < totals[3] ? contributed[3] : totals[3] }}</span>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

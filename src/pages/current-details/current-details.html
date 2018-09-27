@@ -1,0 +1,118 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title style="text-align:center">Uttrakhand - Landslide</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card padding>
+    <h2>Area : sector-5, east patel nagar, uttrakhand</h2>
+  </ion-card>
+
+  <ion-card padding>
+    <ion-card-header>
+      <h2>Food:</h2>
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item>
+        <ion-label color="dark">Rice</ion-label>
+        <ion-select [(ngModel)]="gaming">
+          <ion-option value="nes">20 kg</ion-option>
+          <ion-option value="n64">50 kg</ion-option>
+          <ion-option value="ps">100 kg</ion-option>
+          <ion-option value="genesis">150 kg</ion-option>
+          <ion-option value="saturn">250 kg</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label color="dark">Water bottles</ion-label>
+        <ion-select [(ngModel)]="gaming">
+          <ion-option value="nes">50L</ion-option>
+          <ion-option value="n64">150L</ion-option>
+          <ion-option value="ps">200L</ion-option>
+          <ion-option value="genesis">300L</ion-option>
+          <ion-option value="saturn">500L</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h2>Medication:</h2>
+    </ion-card-header>
+    <ion-list radio-group>
+      <ion-item>
+        <ion-label>Needed</ion-label>
+        <ion-radio color="dark" checked="true"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Not Needed</ion-label>
+        <ion-radio color="dark"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h2>Clothes:</h2>
+    </ion-card-header>
+
+    <ion-list radio-group>
+      <ion-item>
+        <ion-label>Needed</ion-label>
+        <ion-radio color="dark" checked="true"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Not Needed</ion-label>
+        <ion-radio color="dark"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <hr>
+
+  <ion-card>
+    <ion-card-header>
+      Volunteers needed:
+    </ion-card-header>
+
+    <ion-list id="all">
+      <ion-item>
+        <ion-label>Select All</ion-label>
+        <ion-checkbox color="dark" (ionChange)="selectAll()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Raj</ion-label>
+        <ion-checkbox [checked]="selectedAll || selected['raj']" color="dark"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Vikash</ion-label>
+        <ion-checkbox [checked]="selectedAll || selected['vikash']" color="dark"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Vineet</ion-label>
+        <ion-checkbox [checked]="selectedAll || selected['vineet']" color="dark"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Rita</ion-label>
+        <ion-checkbox [checked]="selectedAll || selected['rita']" color="dark"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Binayak</ion-label>
+        <ion-checkbox [checked]="selectedAll || selected['binayak']" color="dark"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button block (click)="ConfirmListDetails()">Submit</button>
+</ion-footer>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Confirm Event</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header color="primary">
+      Volunteers Response (2 available now)
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Select Available volunteers</ion-label>
+        <ion-checkbox color="dark" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Raj</ion-label>
+        <ion-badge item-end style="background-color:green">Available</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Vikash</ion-label>
+        <ion-badge item-end style="background-color:rgb(184, 184, 37)">Awaiting</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Vineet</ion-label>
+        <ion-badge item-end style="background-color:#da2a13">Busy</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Rita</ion-label>
+        <ion-badge item-end style="background-color:#da2a13">Can't Connect</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Binayak</ion-label>
+        <ion-badge item-end style="background-color:green">Available</ion-badge>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button block (click)="FinalConfirmation()">Send Notification</button>
+</ion-footer>

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Update Stocks</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header>
+      <h2>Food Inventory</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row padding *ngFor="let item of foodItems; let i = index;">
+          <ion-col col-3>{{ i + 1 }}.</ion-col>
+          <ion-col col-3>{{ item.title }}</ion-col>
+          <ion-col col-3>{{ item.qty }} kg</ion-col>
+          <ion-col>
+            <button ion-button (click)="updateFood(i)">
+              Increase stock
+              <br />
+              <ion-icon name="add" padding></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h2>Cloth Inventory</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row padding *ngFor="let item of clothItems; let i = index;">
+          <ion-col col-3>{{ i + 1 }}.</ion-col>
+          <ion-col col-3>{{ item.title }}</ion-col>
+          <ion-col col-3>{{ item.qty }} units</ion-col>
+          <ion-col>
+            <button ion-button (click)="updateCloth(i)">
+              Increase stock
+              <br />
+              <ion-icon name="add" padding></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h2>Medicine Inventory</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row padding *ngFor="let item of medicines; let i = index;">
+          <ion-col col-3>{{ i + 1 }}.</ion-col>
+          <ion-col col-3>{{ item.title }}</ion-col>
+          <ion-col col-3>{{ item.qty }} units</ion-col>
+          <ion-col>
+            <button ion-button>
+              Increase stock
+              <br />
+              <ion-icon name="add" padding></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

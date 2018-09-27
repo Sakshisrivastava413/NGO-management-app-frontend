@@ -1,0 +1,10 @@
+page-update-inventory {
+  .card-header-md {
+    background: map-get($colors, 'primary');
+    h2 {
+      color: white;
+      font-size: 3rem;
+      font-weight: 300;
+    }
+  }
+}
